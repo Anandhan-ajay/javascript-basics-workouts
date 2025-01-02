@@ -3327,22 +3327,300 @@
 
 // makeOtp(6)
 
-let otp = "";
+// let otp = "";
 
-const makeName = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o","p", "q", "r","s", "t", "u", "v", "w", "x","y", "z"];
+// const makeName = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o","p", "q", "r","s", "t", "u", "v", "w", "x","y", "z"];
 
-for(let i=0 ; i < 6; i++){
-    res = Math.floor(Math.random() * makeName.length);
-    otp += makeName[res]
-}
+// for(let i=0 ; i < 6; i++){
+//     res = Math.floor(Math.random() * makeName.length);
+//     otp += makeName[res]
+// }
 
-console.log(otp);
-
-
-console.log("Second commit is working...");
-console.log("third commit is working...");
+// console.log(otp);
 
 
+// let count = 0;
+
+// const response = setInterval(()=>{
+//     if(count < 5){
+//         count++;
+//         console.log("Working...");
+//     }else{
+//         () => clearInterval(count)
+//     }
+
+//     return () => clearInterval(count)
+// },1000)
+
+// response();
+
+// const response = () => {
+//     console.log("Its working...");
+// }
+
+// const originalObj = { name: "John", age: 30, address: { city: "New York" } };
+// const deepCopy = JSON.parse(JSON.stringify(originalObj));
+// const sallowCopy = originalObj;
+
+// originalObj.age = 40;
+// originalObj.address.city = "London";
+
+// //shallow copy will impact
+// //deep copy won't impact
+
+// console.log(deepCopy);
+// console.log(sallowCopy);
+// console.log(originalObj);
+
+
+// const objIs = [{
+//     name : "Anand",
+//     plane : [{
+//         name : "Ajay",
+//         plane : [{
+//             name : "Chandru"
+//         }]
+//     }]
+// }]
+
+// let arr =[];
+// function workOuts(firstIs){
+//     firstIs.map((data,ind)=>{
+//         if(data.name){
+//             arr.push(data.name)
+//         }
+//         if(data.plane){
+//             workOuts(data.plane)
+//         }
+//     })
+// }
+
+// workOuts(objIs)
+// console.log(arr);
+
+// document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2024 12:00:00 UTC; path=/";
+
+// function getCookie(name) {
+//     const cookies = document.cookie.split(';');
+//     for (let cookie of cookies) {
+//       if (cookie.trim().startsWith(name + '=')) {
+//         return cookie.split('=')[1];
+//       }
+//     }
+//     return null;
+//   }
+//   console.log(getCookie("username")); // Output: JohnDoe
+
+//   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+
+// const arr = [1,2,3,4,5,6,7,8,9,0,"a","b","c","d","e","f"];
+// let makeColor = "#";
+
+// for(let i=0; i < 6; i++){
+//     const res = Math.floor(Math.random() * arr.length);
+//     makeIndex = arr[res];
+//     makeColor += makeIndex
+// }
+
+// console.log(makeColor);
+
+// function rightPyramid(rows) {
+//   for (let i = 1; i <= rows; i++) {
+//     let str = "";
+//     // Add spaces for right alignment
+//     for (let j = 1; j <= rows - i; j++) {
+//       str += " ";
+//     }
+//     // Add stars for the current row
+//     for (let k = 1; k <= 2 * i - 1; k++) {
+//       str += "*";
+//     }
+//     console.log(str);
+//   }
+// }
+// rightPyramid(5);
+
+// function pyramidFunction(rows) {
+//   for (let i = 1; i <= rows; i++) {
+//     let str = "";
+//     for (let j = 1; j <= rows - i; j++) {
+//       str += " ";
+//     }
+//     for (let k = 1; k <= 2 * i - 1; k++) {
+//       str += "*";
+//     }
+//     console.log(str);
+//   }
+// }
+
+// pyramidFunction(5);
+
+(function(){
+    console.log("Check IIFE executed!");
+}())
+
+// Anonymous Function
+// const greet = function() {
+//     console.log("Hello, World!");
+//   };
+// greet();
+
+// call ,apply 
+// const person1 = {
+//     nameIs : "John",
+//     greet : function(age){
+//         console.log(`My ${this.nameIs} is and ${age} years old`);
+//         // return `My ${nameIs} is and ${age} years old`
+//     }
+// }
+
+// const person2 = {
+//     nameIs : "Anand"
+// }
+
+// person1.greet.call(person2, 300);
+// apply 
+// const person1 = {
+//     nameIs : "John",
+//     greet : function(age){
+//         console.log(`My ${this.nameIs} is and ${age} years old`);
+//         // return `My ${nameIs} is and ${age} years old`
+//     }
+// }
+
+// const person2 = {
+//     nameIs : "Anand"
+// }
+
+// person1.greet.apply(person2,[ 300]);
+
+// Generator function 
+// function* numberGenerator() {
+//     yield 1; // First pause, returns 1
+//     yield 2; // Second pause, returns 2
+//     yield 3; // Third pause, returns 3
+// }
+
+// const gen = numberGenerator();
+
+// console.log(gen.next()); // { value: 1, done: false }
+// console.log(gen.next()); // { value: 2, done: false }
+// console.log(gen.next()); // { value: 3, done: false }
+// console.log(gen.next()); // { value: undefined, done: true }
+
+
+// functionDeclaration()
+
+// function functionDeclaration(){
+//     console.log("FunctionDeclaration...");
+// }
+
+
+// const functionExpression = () => {
+//     console.log("FunctionExpression...");
+// }
+// functionExpression()
+
+
+// for (let i=1; i <= 5; i++){
+//     str = "";
+//     for (let j=1; j <=i ; j++){
+//         str += j
+//     }
+
+//     console.log(str);
+// }
+
+// for (let i=1; i<=5; i++){
+//     str ="";
+
+//     for(let j=1; j<=i; j++){
+        
+//         str += j
+//     }
+//     console.log(str);
+// }
+
+// for (let i=1; i <=5 ; i++){
+//     let str ="Anand"
+//     for(let j=1; j<=i; j++){
+//         console.log(str += "han");
+//     }
+// }
+
+// for(let i=0; i < 10; i++){
+//     let str ="";
+//     for(let j=0; j < i + 1; j++){
+//         str = str + i
+//     }
+//     console.log(str);
+// }
+
+// let str = "";
+// for (let i=1; i<10 ; i++){
+//     for (let j=0; j<i; j++){
+//         str += "* "
+//     }
+//     str += "\n"
+// }
+
+// console.log(str);
+
+// unfortunate pyramid 
+// let str =""
+// for(let i=9; i >= 0; i--){
+//     for(let j=0; j < i; j++){
+//         str += " "
+//     }
+//     for (let k=i; k < 10; k++){
+//         str += "* "
+//     }
+//         str += "\n"
+// }
+
+// console.log(str);
+
+// 1 
+// let str ="";
+// for (let i = 10; i >= 0; i--){
+//     for(let j=0; j <i; j++){
+//         str += " "
+//     }
+//     for(let k = i; k <= 10; k++){
+//         str += "* "
+//     }
+//     str += "\n"
+// }
+// console.log(str);
+
+// let out = "";
+// for (let i=0; i<10; i++){
+//     for(let j=0; j <= i; j++){
+//         out += "* "
+//     }
+
+//     out += "\n"
+// }
+// console.log(out);
+
+// let str ="";
+// for(let i = 1; i<=10; i++){
+//     for(let j=0; j < i; j++){
+//         str += "* "
+//     }
+//     str += "\n"
+// }
+
+// console.log(str);
+
+// for (let i =0; i < 5; i++){
+//     let str ="";
+//     for(let j=0; j <= 5; j++){
+//         str += j
+//     }
+
+//     console.log(i);
+// }
 
 
 
@@ -3352,6 +3630,223 @@ console.log("third commit is working...");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Loop basics 
+// for (let i = 0; i < 10; i = i + 2){
+//     console.log("*", i);
+// }
+// for (let i = 0; i < 10; i = i + 2){
+//     console.log("*", i);
+// }
+
+// 3d array 
+// let out = ""
+// for(let i=0; i < 3; i++){
+//     for(let j=0; j<3; j++){
+//         out += "* "
+//     }
+//     out = out + "\n"
+// }
+// console.log(out);
+
+// method 1
+// for (let i=1 ; i <=5; i++){
+//     let str = ""
+//    for(let j=1 ; j <= i; j++){
+//         str += j
+//         // console.log(i);
+//    }
+//    console.log(str);
+// }
+// method 2
+// let out = ""
+// for (let i=1 ; i <=5; i++){
+//    for(let j=1 ; j <= i; j++){
+//         out += j
+//    }
+//    out += "\n"
+// }
+// console.log(out);
+// 10 row 10 column 
+// let str = ""
+// for (let i=1 ; i <=10 ; i++){
+//     for (let j=1; j <= 10; j++){
+//         str += "* "
+//     }
+//     str += "\n"
+// }
+
+// console.log(str);
+
+// let str ="";
+// for (let i=1; i <=5; i++){
+//     for(let j=1; j<=i; j++){
+//         str += j +" "
+//     }
+//     str += "\n"
+// }
+
+// console.log(str);
+
+// o/p
+// 1 
+// 1 2 
+// 1 2 3 
+// 1 2 3 4 
+// 1 2 3 4 5 
+
+// let str =""
+// for(let i=1; i<= 5; i++){
+//     let temp = i * 2;
+//     for(let j=0; j < temp; j++){
+//         str += "* "
+//     }
+//     str += "\n"
+// }
+
+// console.log(str);
+// o/package* * 
+// * * * * 
+// * * * * * * 
+// * * * * * * * * 
+// * * * * * * * * * * 
+
+// for(let i=0; i <10; i++){
+//     for (let j =0; j < i; j++){
+//         out += "- "
+//     }
+//     for(let k =i; k < 10; k++){
+//         out += "* "
+//     }
+//     out += "\n"
+// }
+// console.log(out);
+// o/p 
+// * * * * * * * * * * 
+// - * * * * * * * * * 
+// - - * * * * * * * * 
+// - - - * * * * * * * 
+// - - - - * * * * * * 
+// - - - - - * * * * * 
+// - - - - - - * * * * 
+// - - - - - - - * * * 
+// - - - - - - - - * * 
+// - - - - - - - - - * 
+
+// let out ="";
+// for(let i=10; i > 0; i--){
+//     for (let j =0; j < i; j++){
+//         out += "- "
+//     }
+//     for(let k =i; k < 10; k++){
+//         out += "* "
+//     }
+//     out += "\n"
+// }
+// console.log(out);
+// o/p 
+// - - - - - - - - - - 
+// - - - - - - - - - * 
+// - - - - - - - - * * 
+// - - - - - - - * * * 
+// - - - - - - * * * * 
+// - - - - - * * * * * 
+// - - - - * * * * * * 
+// - - - * * * * * * * 
+// - - * * * * * * * * 
+// - * * * * * * * * * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Workingjs
+// let arr =[];
+// function workOuts(firstIs){
+//     firstIs.map((data,ind)=>{
+//         if(data.name){
+//             arr.push(data.name)
+//         }
+//         if(data.plane){
+//             workOuts(data.plane)
+//         }
+//     })
+// }
+
+// workOuts(objIs)
+// console.log(arr);
 
 // const arr = [1,2,3,[5,6,7,[8,9,[10,[11]]]]];
 
