@@ -13,6 +13,8 @@
 //     return "aaa"
 // }
 
+
+
 // function secondFun(fun){
 //     console.log(fun());
 // }
